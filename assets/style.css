@@ -1,0 +1,230 @@
+/* Reset CSS */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+	scroll-behavior: smooth;
+}
+/* Variaveis */
+
+:root{
+  --cor-fundo: rgb(255, 255, 255);
+  --cor-hover: rgb(34, 41, 37);
+  --cor-primaria: rgb(0, 0, 0);
+}
+
+/* Conteudo principal */
+
+body{
+  background-color: var(--cor-fundo);
+  font-family: poppins, sans-serif;
+  font-size: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  text-size-adjust: auto;
+	
+	transition: background 0.2s linear;
+}
+
+/* Logos Header */
+
+.logos-hospital{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+hr{
+  box-shadow: 4px 5px 5px #dbdbdc;
+  position: center;
+}
+
+/* footer */
+
+#marca-propria{
+  font-size: 15px;
+  text-align: left;
+  font-family: Times New Roman;
+}
+
+/*Menu Dropdown*/
+
+.dp-menu ul{
+  list-style-type: none;
+  padding: 0;
+}
+
+.dp-menu ul{
+  background-color: var(--cor-fundo);
+}
+
+.dp-menu ul li{
+  display: inline;
+  position: relative;
+}
+
+.dp-menu ul li a{
+  color: var(--cor-primaria);
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  transition: background .3s;
+}
+
+.dp-menu ul li a::after{
+  content: " ";
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.2s ease-in-out;
+}
+.dp-menu ul li a:hover::after{
+  width:100%;
+}
+/*sub-Menu*/
+
+.dp-menu ul ul{
+  display: none;
+  left: 0;
+  position: absolute;
+  transition: all .6s;
+}
+
+.dp-menu ul li:hover ul{
+  display: block;
+}
+
+.dp-menu ul ul{
+  width: 150px;
+  
+}
+
+.dp-menu ul ul li a{
+  display: block;
+}
+
+/*Conteudo recolhivel*/
+
+#accordion{
+	margin: 100px auto;
+	width: 600px;
+	
+}
+
+#accordion li{
+	list-style: none;
+	width: 100%;
+	margin-bottom: 10px;
+	background: #fff;
+	padding: 10px;
+	border-radius: 4px;
+}
+
+#accordion li label{
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 18px;
+	font-weight: 500;
+	cursor: pointer;
+	color: #1c1c6b;
+	text-align: center;
+}
+
+#accordion li label span{
+	transform: rotate(90deg);
+	font-size: 22px;
+	color: #000;
+	
+}
+
+#accordion label + input[type="radio"]{
+	display: none;
+}
+
+#accordion .content{
+	padding: 0 10px;
+	line-height: 26px;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-heigth 0.5s;
+	text-align: justify;
+}
+
+#accordion label + input[type="radio"]:checked + .content{
+	max-height: 600px;
+	transition: all 2s ease;
+}
+
+/*Tema escuro*/
+
+body.dark{
+	background: #232c35;
+	color: #fff;
+}
+
+.dark-theme{
+	width: 100%;
+	display: flex;
+	
+}
+.checkbox{
+	opacity: 0;
+	position: absolute;
+	left: 90px;
+}
+
+.label{
+	background: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	left: 10px;
+	top: 10px;
+	margin-left: 10px;
+	margin-right: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	padding: 5px;
+	position: relative;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+.label .ball{
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball{
+	transform: translateX(24px);
+}
+
+.fa-moon{
+	color: #f1c40f;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+
+.fa-sun{
+	color:#f39c12;
+}
+
