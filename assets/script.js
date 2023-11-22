@@ -1,7 +1,9 @@
-var elementosSobre = document.querySelectorAll('.content')
+var elementosInfo = document.querySelectorAll(".info");
 
-elementosSobre.forEach(function(sobre){
-	sobre.addEventListener('click', function(){
-		sobre.classList.add('ativo')
-	})
-})
+elementosInfo.forEach(
+	/*executa uma função para cada elemento*/ function (info) {
+		info.addEventListener("click", function () {
+			info.classList.toggle("ativa");
+		});
+	}
+);

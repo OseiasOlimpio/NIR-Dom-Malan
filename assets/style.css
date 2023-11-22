@@ -67,6 +67,7 @@ hr{
 .dp-menu ul li{
   display: inline;
   position: relative;
+	z-index: 1;
 }
 
 .dp-menu ul li a{
@@ -114,117 +115,65 @@ hr{
 
 /*Conteudo recolhivel*/
 
-#accordion{
-	margin: 100px auto;
-	width: 600px;
-	
-}
-
-#accordion li{
-	list-style: none;
-	width: 100%;
-	margin-bottom: 10px;
-	background: #fff;
-	padding: 10px;
-	border-radius: 4px;
-}
-
-#accordion li label{
-	padding: 10px;
+.conteudo {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	font-size: 18px;
-	font-weight: 500;
-	cursor: pointer;
-	color: #1c1c6b;
-	text-align: center;
-}
-
-#accordion li label span{
-	transform: rotate(90deg);
-	font-size: 22px;
-	color: #000;
-	
-}
-
-#accordion label + input[type="radio"]{
-	display: none;
-}
-
-#accordion .content{
-	padding: 0 10px;
-	line-height: 26px;
-	max-height: 0;
-	overflow: hidden;
-	transition: max-heigth 0.5s;
-	text-align: justify;
-}
-
-#accordion label + input[type="radio"]:checked + .content{
-	max-height: 600px;
-	transition: all 2s ease;
-}
-
-/*Tema escuro*/
-
-body.dark{
-	background: #232c35;
-	color: #fff;
-}
-
-.dark-theme{
-	width: 100%;
-	display: flex;
-	
-}
-.checkbox{
-	opacity: 0;
-	position: absolute;
-	left: 90px;
-}
-
-.label{
-	background: #111;
-	border-radius: 50px;
-	cursor: pointer;
-	left: 10px;
-	top: 10px;
-	margin-left: 10px;
-	margin-right: 0px;
-	display: flex;
+	justify-content: center;
+	gap: 64px;
+	padding: 64px 80px;
 	flex-direction: row;
-	justify-content: flex-end;
-	padding: 5px;
+	flex-wrap: wrap;
+}
+
+.info {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	width: 40em;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+.info h2 {
+	border: 2px solid #0285ca;
+	border-radius: 8px;
+	cursor: pointer;
+	padding: 24px;
+}
+
+.info {
 	position: relative;
-	height: 26px;
-	width: 50px;
-	transform: scale(1.5);
 }
 
-.label .ball{
-	background-color: #fff;
-	border-radius: 50%;
+.p-info {
+	border-bottom: 2px solid #0285ca;
+	border-left: 2px solid #0285ca;
+	border-right: 2px solid #0285ca;
+	border-radius: 0 0 8px 8px;
+	margin-top: -16px;
+	margin-bottom: 32px;
+	padding: 0 30px;
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: 0.5s all ease-in-out;
+	line-height: 20px;
+}
+
+.p-info li {
+	list-style-type: none;
+}
+
+.info img {
 	position: absolute;
-	top: 2px;
-	left: 2px;
-	height: 22px;
-	width: 22px;
-	transform: translateX(0px);
-	transition: transform 0.2s linear;
+	top: 30px;
+	right: 35px;
+	transition: 0.2s ease;
 }
 
-.checkbox:checked + .label .ball{
-	transform: translateX(24px);
+.info.ativa .p-info {
+	height: fit-content;
+	opacity: 1;
+	padding: 24px;
 }
-
-.fa-moon{
-	color: #f1c40f;
-	padding-bottom: 10px;
-	padding-right: 10px;
-}
-
-.fa-sun{
-	color:#f39c12;
-}
-
