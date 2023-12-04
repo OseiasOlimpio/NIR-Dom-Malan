@@ -1,5 +1,6 @@
-/* Reset CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+/* Reset CSS */
 *{
   padding: 0;
   margin: 0;
@@ -11,7 +12,7 @@ html{
 /* Variaveis */
 
 :root{
-  --cor-fundo: rgb(255, 255, 255);
+  --cor-fundo: rgb(201, 201, 201);
   --cor-hover: rgb(34, 41, 37);
   --cor-primaria: rgb(0, 0, 0);
 }
@@ -41,16 +42,8 @@ body{
 }
 
 hr{
-  box-shadow: 4px 5px 5px #dbdbdc;
+  box-shadow: 4px 0 5px #9e9e9e;
   position: center;
-}
-
-/* footer */
-
-#marca-propria{
-  font-size: 15px;
-  text-align: left;
-  font-family: Times New Roman;
 }
 
 /*Menu Dropdown*/
@@ -62,6 +55,7 @@ hr{
 
 .dp-menu ul{
   background-color: var(--cor-fundo);
+	
 }
 
 .dp-menu ul li{
@@ -76,6 +70,7 @@ hr{
   display: inline-block;
   padding: 10px;
   transition: background .3s;
+	
 }
 
 .dp-menu ul li a::after{
@@ -87,6 +82,7 @@ hr{
   bottom: 0;
   left: 0;
   transition: 0.2s ease-in-out;
+	
 }
 .dp-menu ul li a:hover::after{
   width:100%;
@@ -168,12 +164,34 @@ hr{
 .info img {
 	position: absolute;
 	top: 30px;
-	right: 35px;
-	transition: 0.2s ease;
+	right: 10px;
 }
 
 .info.ativa .p-info {
 	height: fit-content;
 	opacity: 1;
 	padding: 24px;
+}
+
+.info.ativa img {
+	transform: rotate(90deg);
+}
+.info.ativa img{
+	transition: 0.5s all ease;
+}
+
+footer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-family: sans-serif;
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+
+footer a{
+	font-family: 'poppins',sans-serif;
+	text-decoration: none;
+	color: #000033;
 }
