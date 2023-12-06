@@ -136,6 +136,8 @@ hr{
 	border-radius: 8px;
 	cursor: pointer;
 	padding: 24px;
+	font-size: 1em;
+
 }
 
 .info {
@@ -147,7 +149,7 @@ hr{
 	border-left: 2px solid #0285ca;
 	border-right: 2px solid #0285ca;
 	border-radius: 0 0 8px 8px;
-	margin-top: -16px;
+	margin-top: -15px;
 	margin-bottom: 32px;
 	padding: 0 30px;
 	height: 0;
@@ -173,17 +175,28 @@ hr{
 	padding: 24px;
 }
 
-.info.ativa img {
+.info.ativa .arrow{
 	transform: rotate(90deg);
 }
-.info.ativa img{
+.info.ativa .arrow{
 	transition: 0.5s all ease;
 }
+
+
+
+
+.img-hosp img{
+	top:20px;
+	left: 10px;
+	width: 100px;
+	height: 40px;
+}
+
 
 footer{
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
 	flex-direction: column;
 	font-family: sans-serif;
 	margin-bottom: 10px;
@@ -194,4 +207,41 @@ footer a{
 	font-family: 'poppins',sans-serif;
 	text-decoration: none;
 	color: #000033;
+}
+
+
+@media screen and (max-width: 600px){
+	body{
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		width: 87vw;
+		height: 1vmax;
+		padding: 20px;
+		margin: 20px;
+	}
+	.conteudo {
+		display: block;
+		align-items: center;
+		justify-content: center;
+		gap: 64px;
+		padding: 64px 80px;
+	}
+
+	.info {
+		display: block;
+		justify-content: center;
+		margin: 0;
+		padding: 0;
+		width: 30em;
+	}
+	footer{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-direction: column;
+	font-family: sans-serif;
+	margin-bottom: 10px;
+	font-size: 12px;
+	}
 }
