@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./assets/index.css">
+	<link rel="stylesheet" href="./assets/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
 		integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -75,18 +75,18 @@
 	</nav>
 
 </header>
-<script src="./assets/script.js" rel="script"></script>
+<script src="./assets/script.js" rel="script" defer></script>
 <!--linha horizontal-->
 <hr>
-
-<ul id="accordion">
-	<li>
-		<label for='first'>
-			<img src="./img/cardio.jpg">Cirurgia Cardiopediatra <span>&#x3e;</span>
-		</label>
-		<input type="radio" name="accordion" id="first">
-		<div class="content">
-			<p>
+<section class="conteudo">
+	<div class="info">
+			<img src="/img/cardio.jpg" class="img-esp">
+		<h2>
+			Cirurgia Cardiopediatra
+		</h2>
+		<img src="icons/arrow.svg" class="arrow">
+		<div>
+			<p class="p-info">
 				Solicitar parecer do Cardiopediatra/HDM, para
 				depois entrar em contato com o Hospital Real
 				Português
@@ -94,68 +94,76 @@
 				9424.
 			</p>
 		</div>
-	</li>
-	<li>
-		<label for='second'>
-			<img src="./img/endoscopia.jpg">Endoscopia<span>&#x3e;</span>
-		</label>
-		<input type="radio" name="accordion" id="second">
-		<div class="content">
-			<p>
+	</div>
+	
+	<div class="info">
+			<img src="/img/endoscopia.jpg" class="img-esp">
+		<h2>
+			Endoscopia
+		</h2>
+		<img src="icons/arrow.svg" class="arrow">
+		<div>
+			<p class="p-info">
 				Nos casos de retirada de corpo estranho
 				(esôfago/estômago) deve acionar a BIOIMAGEM
 				(Elianni – 87 9 8841 - 1924 ).
 			</p>
 		</div>
-	</li>
+	</div>
 	
-	<li>
-		<label for='third'>
-			<img src="./img/neuro.jpg">Neurologia<span>&#x3e;</span>
-		</label>
-		<input type="radio" name="accordion" id="third">
-		<div class="content">
-			<p>
+	<div class="info">
+		<img src="/img/neuro.jpg" class="img-esp">
+		<h2>
+			Neurologia
+		</h2>
+		<img src="icons/arrow.svg" class="arrow">
+		<div>
+			<p class="p-info">
 				Solicitar parecer do Neurocirurgião/HDM, para
 				posteriormente entrar em contato com o Hospital
 				Restauração (HR) em Recife (81) 3181-5460
 			</p>
 		</div>
-	</li>
+	</div>
 	
-	<li>
-		<label for='fourth'>
-			<img src="./img/obstetricia.jpg">Obstetricia<span>&#x3e;</span>
-		</label>
-		<input type="radio" name="accordion" id="fourth">
-		<div class="content">
-			<p>
+	<div class="info">
+		<img src="/img/obstetricia.jpg" class="img-esp">
+		<h2>
+			Obstetricia
+		</h2>
+		<img src="icons/arrow.svg" class="arrow">
+		<div>
+			<p class="p-info">
 				Os casos de gestante baixo risco solicitar vaga o HMIJ/Juazeiro-PE, de acordo com o protocolo.
 			</p>
 		</div>
-	</li>
+	</div>
 	
-	<li>
-		<label for='sixth'>
-			<img src="./img/oftalmo.jpg">Oftalmologia<span>&#x3e;</span>
-		</label>
-		<input type="radio" name="accordion" id="sixth">
-		<div class="content">
-			<p>
+	<div class="info">
+		<img src="/img/oftalmo.jpg" class="img-esp">
+		<h2>
+			Oftalmologia
+		</h2>
+		<img src="icons/arrow.svg" class="arrow">
+		<div>
+			<p class="p-info">
 				Nos casos de celulite retroorbitária deve solicitar
 				vaga com a imagem e laudo da TC, para avaliar a
 				necessidade de descompressão
 			</p>
 		</div>
-	</li>
+	</div>
 	
-	<li>
-		<label for='seventh'>
-			<img src="./img/oncologia.jpg">Oncologia<span>&#x3e;</span>
-		</label>
-		<input type="radio" name="accordion" id="seventh">
-		<div class="content">
-			<p>
+	<div class="info">
+		
+		<img src="/img/oncologia.jpg" class="img-esp">
+	
+		<h2>
+			Oncologia
+		</h2>
+		<img src="icons/arrow.svg" class="arrow">
+		<div>
+			<p class="p-info">
 				<strong>Perfil Adulto</strong>: Recomenda-se verificar o perfil do paciente. Em situações que demandem
 				leitos de
 				retaguarda, é
@@ -166,8 +174,9 @@
 				nome do médico/CRM/contato e unidade executante.
 			</p>
 		</div>
-	</li>
-</ul>
+	</div>
+</section>
+
 	
 <footer class='copy-mark'>&copy;
 	2023 Oséias Olimpio

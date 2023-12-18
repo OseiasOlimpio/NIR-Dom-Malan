@@ -115,29 +115,30 @@ hr{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 64px;
-	padding: 64px 80px;
-	flex-direction: row;
-	flex-wrap: wrap;
+	padding: 0;
+	/* align-content: center; */
+	flex-wrap: nowrap;
+	flex-direction: column;
 }
 
 .info {
 	display: flex;
 	justify-content: center;
-	margin: 0;
 	padding: 0;
 	width: 40em;
 	flex-direction: column;
 	flex-wrap: nowrap;
+	margin-left: 25vw;
+	margin-right: 25vw;
+	margin-top: 5vh;
 }
 
 .info h2 {
 	border: 2px solid #0285ca;
 	border-radius: 8px;
 	cursor: pointer;
-	padding: 24px;
+	padding: 30px;
 	font-size: 1em;
-
 }
 
 .info {
@@ -182,17 +183,21 @@ hr{
 	transition: 0.5s all ease;
 }
 
-
-
-
 .img-hosp img{
 	top:20px;
 	left: 10px;
-	width: 100px;
+	width: 90px;
 	height: 40px;
 }
 
-
+.info .img-esp{
+	position: absolute;
+	border-radius: 8px;
+	top: 8px;
+	left: 10px;
+	width: 110px;
+	height: 62px;
+}
 footer{
 	display: flex;
 	align-items: center;
@@ -209,7 +214,10 @@ footer a{
 	color: #000033;
 }
 
-
+a{
+	text-decoration: underline;
+	color: #000033;
+}
 @media screen and (max-width: 600px){
 	body{
 		display: grid;
