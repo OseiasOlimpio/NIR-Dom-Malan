@@ -111,6 +111,7 @@ hr{
 
 /*Conteudo recolhivel*/
 .title{
+	margin-top: 1em;
 	font-size: large;
 	font-weight: 500;
 }
